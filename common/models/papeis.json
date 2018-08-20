@@ -1,0 +1,22 @@
+{
+  "name": "papeis",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "nome": {
+      "type": "string",
+      "default": "''"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

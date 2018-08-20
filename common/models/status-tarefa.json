@@ -1,0 +1,33 @@
+{
+  "name": "statusTarefa",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "nome": {
+      "type": "string"
+    },
+    "codigo": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tarefas": {
+      "type": "hasMany",
+      "model": "tarefas",
+      "foreignKey": "statusId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

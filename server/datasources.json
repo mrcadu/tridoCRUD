@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "tarefas",
+    "password": "ka323212",
+    "name": "db",
+    "user": "cadu",
+    "connector": "mysql"
+  }
+}

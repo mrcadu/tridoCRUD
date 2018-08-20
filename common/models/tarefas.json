@@ -1,0 +1,88 @@
+{
+  "name": "tarefas",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "equilibrioId": {
+      "type": "string",
+      "default": ""
+    },
+    "triadeId": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    "nome": {
+      "type": "string",
+      "required": true,
+      "default": "''"
+    },
+    "duracao": {
+      "type": "string",
+      "default": "'30m'"
+    },
+    "data": {
+      "type": "date",
+      "default": ""
+    },
+    "statusId": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "validations": [],
+  "relations": {
+    "equilibrioId": {
+      "type": "hasOne",
+      "model": "equilibrio",
+      "foreignKey": "id",
+      "options": {
+        "nestRemoting": true,
+        "forceId": true
+      }
+    },
+    "triade": {
+      "type": "hasOne",
+      "model": "triade",
+      "foreignKey": "id",
+      "options": {
+        "nestRemoting": true,
+        "forceId": true
+      }
+    },
+    "statusTarefa": {
+      "type": "hasOne",
+      "model": "statusTarefa",
+      "foreignKey": "id",
+      "options": {
+        "nestRemoting": true,
+        "forceId": true
+      }
+    },
+    "metas": {
+      "type": "hasAndBelongsToMany",
+      "model": "metas",
+      "throughTable": "metasTarefa",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "papeis": {
+      "type": "hasAndBelongsToMany",
+      "model": "papeis",
+      "throughTable": "papeisTarefa",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

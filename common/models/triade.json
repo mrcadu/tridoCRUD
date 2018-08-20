@@ -1,0 +1,30 @@
+{
+  "name": "triade",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "forceId": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true
+    },
+    "Circunstancial": {
+      "type": "boolean",
+      "default": false
+    },
+    "Importante": {
+      "type": "boolean",
+      "default": false
+    },
+    "Urgente": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
