@@ -1,6 +1,6 @@
 {
   "db": {
-    "host": "localhost",
+    "host": "35.199.84.85",
     "port": 3306,
     "url": "",
     "database": "tarefas",
