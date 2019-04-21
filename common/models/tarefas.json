@@ -39,7 +39,7 @@
   },
   "validations": [],
   "relations": {
-    "equilibrioId": {
+    "equilibrios": {
       "type": "hasOne",
       "model": "equilibrio",
       "foreignKey": "id",
